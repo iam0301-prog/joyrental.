@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyRental - 療癒系智能租屋平台</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body class="theme-professional font-normal">
+    <!-- 載入畫面 -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-content">
+            <div class="splash-chinese">平安</div>
+            <div class="splash-english">PEACE</div>
+            <div style="width: 100px; height: 2px; background: white; margin: 20px auto;"></div>
+            <div class="splash-chinese">喜樂</div>
+            <div class="splash-english">JOY</div>
+            <div class="splash-brand">JoyRental</div>
+        </div>
+    </div>
+
+    <!-- 導航列 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span>🏠</span>
+                <span>JoyRental</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home">首頁</a>
+                <a href="#services">一站式服務</a>
+                <a href="#features">功能</a>
+                <a href="#properties">房源</a>
+                <button id="loginBtn" onclick="showLoginModal()">登入/註冊</button>
+                <div id="userMenu" style="display: none;">
+                    <!-- 用戶選單會由 JS 生成 -->
+                </div>
+                
+                <!-- 主題切換按鈕 -->
+                <div class="theme-switcher">
+                    <button class="theme-btn professional active" onclick="setTheme('professional')" title="專業"></button>
+                    <button class="theme-btn healing" onclick="setTheme('healing')" title="療癒"></button>
+                    <button class="theme-btn custom" onclick="setTheme('custom')" title="自訂"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容區 -->
+    <div id="app">
+        <!-- 內容會由 JavaScript 動態載入 -->
+    </div>
+
+    <!-- 模態框容器 -->
+    <div id="modals"></div>
+
+    <!-- 通知提示 -->
+    <div class="notification" id="notification"></div>
+
+    <!-- JavaScript 檔案 -->
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

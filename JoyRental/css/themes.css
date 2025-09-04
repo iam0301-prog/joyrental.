@@ -1,0 +1,73 @@
+/* 專業模式 */
+body.theme-professional {
+    --bg-main: #FAF7F0;
+    --primary: #2C3E50;
+    --accent: #E74C3C;
+    --text-primary: #2C3E50;
+    --text-secondary: #7F8C8D;
+    --card-bg: #FFFFFF;
+    --bg-gradient: linear-gradient(135deg, #2C3E50 0%, #E74C3C 100%);
+    --card-shadow: 0 4px 20px rgba(44, 62, 80, 0.1);
+    --filter-bg: #FDFCFA;
+}
+
+/* 療癒模式 */
+body.theme-healing {
+    --bg-main: #FFF5E6;
+    --primary: #FF8C42;
+    --accent: #FFD23F;
+    --text-primary: #5D4037;
+    --text-secondary: #8D6E63;
+    --card-bg: #FFF8F0;
+    --bg-gradient: linear-gradient(135deg, #FF8C42 0%, #FFB347 100%);
+    --card-shadow: 0 4px 20px rgba(255, 140, 66, 0.15);
+    --filter-bg: #FFF9F2;
+}
+
+/* 自訂模式 */
+body.theme-custom {
+    --bg-main: var(--custom-bg, #F0F8FF);
+    --primary: var(--custom-primary, #4A90E2);
+    --accent: var(--custom-accent, #7B68EE);
+    --text-primary: var(--custom-text, #333333);
+    --text-secondary: #666666;
+    --card-bg: #FFFFFF;
+    --bg-gradient: linear-gradient(135deg, var(--custom-primary, #4A90E2) 0%, var(--custom-accent, #7B68EE) 100%);
+    --card-shadow: 0 4px 20px rgba(74, 144, 226, 0.15);
+    --filter-bg: #F8FBFF;
+}
+
+/* 字體大小 */
+body.font-small { font-size: 14px; }
+body.font-normal { font-size: 16px; }
+body.font-large { font-size: 18px; }
+body.font-xlarge { font-size: 20px; }
+
+/* 主題切換按鈕 */
+.theme-switcher {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.theme-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-btn.active {
+    border-color: #333;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+.theme-btn.professional { background: linear-gradient(135deg, #2C3E50, #E74C3C); }
+.theme-btn.healing { background: linear-gradient(135deg, #FF8C42, #FFB347); }
+.theme-btn.custom { background: linear-gradient(135deg, #4A90E2, #7B68EE); }
